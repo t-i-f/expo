@@ -1,0 +1,82 @@
+{
+    "name": "init",
+    "type": "root",
+    "steps": [
+        "prompts",
+        "files|0",
+        "cmds|0",
+        "cmds|1",
+        "cmds|2"
+    ],
+    "cmds": [
+        "mkdir -p {{slug}}/.github/workflows",
+        "mv init.yml {{slug}}/.github/workflows",
+        "mv tisf.json {{slug}}"
+    ],
+    "files": [
+        [
+            "@expo/init/action.yml",
+            "init.yml"
+        ]
+    ],
+    "prompts": [
+        {
+            "type": "input",
+            "name": "name",
+            "message": "What is your project's name?",
+            "default": "MyApp",
+            "required": true
+        },
+        {
+            "type": "input",
+            "name": "slug",
+            "message": "What is your project's slug?",
+            "default": "my-app",
+            "required": true
+        },
+        {
+            "type": "input",
+            "name": "repo",
+            "message": "What is your Github repo? (user/repo)",
+            "required": true
+        },
+        {
+            "type": "checkbox",
+            "name": "features",
+            "message": "Choose features",
+            "choices": [
+                {
+                    "value": "tailwind",
+                    "checked": true
+                },
+                {
+                    "value": "zustand",
+                    "checked": true
+                },
+                {
+                    "value": "onesignal",
+                    "checked": true
+                }
+            ]
+        },
+        {
+            "type": "checkbox",
+            "name": "modules",
+            "message": "Choose modules",
+            "choices": [
+                {
+                    "value": "root",
+                    "checked": true
+                },
+                {
+                    "value": "auth",
+                    "checked": true
+                },
+                {
+                    "value": "drawer",
+                    "checked": true
+                }
+            ]
+        }
+    ]
+}
