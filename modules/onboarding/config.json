@@ -1,0 +1,119 @@
+{
+    "name": "onboarding",
+    "type": "modules",
+    "steps": [
+        "prompts",
+        "deps",
+        "files",
+        "regex"
+    ],
+    "deps": [
+        "npm|react-native-onboarding-swiper",
+        "features|@expo/features/localstorage"
+    ],
+    "regex": [
+        "@expo/modules/onboarding/_layout.yml"
+    ],
+    "files": [
+        [
+            "@expo/modules/onboarding/_layout.tsx",
+            "app/onboarding/_layout.tsx"
+        ],
+        [
+            "@expo/modules/onboarding/index.tsx",
+            "app/onboarding/index.tsx"
+        ]
+    ],
+    "prompts": [
+        {
+            "type": "input",
+            "name": "blue_title",
+            "message": "What is blue onboarding's title?",
+            "default": "Give up Mental Slavery"
+        },
+        {
+            "type": "input",
+            "name": "blue_subtitle",
+            "message": "What is blue onboarding's subtitle?",
+            "default": "Work as a single organ, grow as a community."
+        },
+        {
+            "type": "input",
+            "name": "blue_image",
+            "message": "What is blue onboarding's image?",
+            "default": "require('@/assets/images/onblue.png')"
+        },
+        {
+            "type": "input",
+            "name": "orange_title",
+            "message": "What is orange onboarding's title?",
+            "default": "Connect with Your Community"
+        },
+        {
+            "type": "input",
+            "name": "orange_subtitle",
+            "message": "What is orange onboarding's subtitle?",
+            "default": "Find and interact with verified Punjabis for business and culture."
+        },
+        {
+            "type": "input",
+            "name": "orange_image",
+            "message": "What is orange onboarding's image?",
+            "default": "require('@/assets/images/onorange.png')"
+        },
+        {
+            "type": "input",
+            "name": "purple_title",
+            "message": "What is purple onboarding's title?",
+            "default": "One ID, Many Benefits"
+        },
+        {
+            "type": "input",
+            "name": "purple_subtitle",
+            "message": "What is purple onboarding's subtitle?",
+            "default": "Seamlessly access Panjabi voting and verifications."
+        },
+        {
+            "type": "input",
+            "name": "purple_image",
+            "message": "What is purple onboarding's image?",
+            "default": "require('@/assets/images/onpurple.png')"
+        },
+        {
+            "type": "input",
+            "name": "green_title",
+            "message": "What is green onboarding's title?",
+            "default": "Notifications and Announcements"
+        },
+        {
+            "type": "input",
+            "name": "green_subtitle",
+            "message": "What is green onboarding's subtitle?",
+            "default": "Get notified when there are Panjabi events near you."
+        },
+        {
+            "type": "input",
+            "name": "green_image",
+            "message": "What is green onboarding's image?",
+            "default": "require('@/assets/images/ongreen.png')"
+        },
+        {
+            "type": "input",
+            "name": "red_title",
+            "message": "What is red onboarding's title?",
+            "default": "Cross-Platform Authentication"
+        },
+        {
+            "type": "input",
+            "name": "red_subtitle",
+            "message": "What is red onboarding's subtitle?",
+            "default": "Sign in to partner apps, websites and platforms with one tap."
+        },
+        {
+            "type": "input",
+            "name": "red_image",
+            "message": "What is red onboarding's image?",
+            "default": "require('@/assets/images/onred.png')"
+        }
+    ]
+}

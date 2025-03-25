@@ -1,0 +1,11 @@
+path:
+  - app
+  - _layout.tsx
+data:
+  - find: |
+      /^(import.*?'expo-router';)$/m
+    replace: |
+      $1
+      import "../global.css";
+    already: |
+      global.css

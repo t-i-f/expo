@@ -1,0 +1,44 @@
+name: expo-setup
+
+on:
+  workflow_dispatch:
+
+jobs:
+  setup-expo-app:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20' # Use the version of Node.js you prefer
+
+    - name: Install Node Modules
+      run: npm i
+
+{{#each features}}
+    - name: Install feature-{{@key}}
+      run: npx @tisf/exe @expo/features/{{@key}} -s
+{{/each}}
+
+{{#each modules}}
+    - name: Install module-{{@key}}
+      run: npx @tisf/exe @expo/modules/{{@key}} -s
+{{/each}}
+
+    - name: Commit changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add .
+        git commit -m 'Set up React Native app with create-expo-app'
+
+    - name: Push changes
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: $\{{ secrets.GITHUB_TOKEN }}
+        branch: main
+        force: true

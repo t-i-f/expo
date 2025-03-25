@@ -1,0 +1,17 @@
+{
+    "name": "localstorage",
+    "type": "features",
+    "steps": [
+        "deps",
+        "files"
+    ],
+    "deps": [
+        "expo|@react-native-async-storage/async-storage"
+    ],
+    "files": [
+        [
+            "@expo/features/localstorage/LocalStorage.ts",
+            "features/AsyncStorage/LocalStorage.ts"
+        ]
+    ]
+}

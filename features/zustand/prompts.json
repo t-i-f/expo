@@ -1,0 +1,12 @@
+{
+    "name": "expo-tailwind",
+    "prompts": [
+        {
+            "type": "input",
+            "name": "name",
+            "message": "What is your project's name?",
+            "default": "MyApp",
+            "required": true
+        }
+    ]
+}

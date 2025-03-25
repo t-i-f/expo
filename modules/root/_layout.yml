@@ -1,0 +1,11 @@
+path:
+  - app
+  - _layout.tsx
+data:
+  - find: |
+      /^(.*<Stack>)$/m
+    replace: |
+      $1
+        <Stack.Screen name="root" options=\{{ headerShown: false }} />
+    already: |
+      name="root"

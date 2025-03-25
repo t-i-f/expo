@@ -1,0 +1,20 @@
+{
+    "name": "setup",
+    "type": "root",
+    "steps": [
+        "scripts",
+        "files"
+    ],
+    "scripts": [
+        [
+            "@expo/setup/script"
+        ]
+    ],
+    "files": [
+        [
+            "@expo/setup/action.yml",
+            ".github/workflows/setup.yml",
+            "tisf.json"
+        ]
+    ]
+}

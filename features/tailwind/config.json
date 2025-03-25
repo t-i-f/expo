@@ -1,0 +1,56 @@
+{
+    "name": "tailwind",
+    "type": "features",
+    "steps": [
+        "prompts",
+        "deps",
+        "cmds|0",
+        "cmds|1",
+        "cmds|2",
+        "files|0",
+        "files|1",
+        "files|2",
+        "files|3",
+        "regex",
+        "cmds|3",
+        "files|4"
+    ],
+    "deps": [
+        "expo|nativewind tailwindcss@^3.4.17 react-native-reanimated@3.16.2 react-native-safe-area-context"
+    ],
+    "cmds": [
+        "npx tailwindcss init",
+        "npx expo customize metro.config.js",
+        "npx expo customize babel.config.js",
+        "yes | npx gluestack-ui init"
+    ],
+    "regex": [
+        "@expo/features/tailwind/globalcss.yml"
+    ],
+    "prompts": [
+        {
+            "type": "input",
+            "name": "name",
+            "message": "What is your project's name?",
+            "default": "MyApp",
+            "required": true
+        }
+    ],
+    "files": [
+        [
+            "@expo/features/tailwind/tailwind.config.js"
+        ],
+        [
+            "@expo/features/tailwind/metro.config.js"
+        ],
+        [
+            "@expo/features/tailwind/nativewind-env.d.ts"
+        ],
+        [
+            "@expo/features/tailwind/global.css"
+        ],
+        [
+            "@expo/features/tailwind/babel.config.js"
+        ]
+    ]
+}

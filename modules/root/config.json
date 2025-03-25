@@ -1,0 +1,68 @@
+{
+    "name": "root",
+    "type": "modules",
+    "steps": [
+        "prompts",
+        "deps",
+        "cmds",
+        "files",
+        "regex"
+    ],
+    "deps": [
+        "expo|expo-image"
+    ],
+    "cmds": [
+        "npx gluestack-ui add button",
+        "npx gluestack-ui add text"
+    ],
+    "regex": [
+        "@expo/modules/root/_layout.yml"
+    ],
+    "files": [
+        [
+            "@recipes-expo/modules/root/_layout.tsx",
+            "app/root/_layout.tsx"
+        ],
+        [
+            "@recipes-expo/modules/root/index.tsx",
+            "app/root/index.tsx"
+        ]
+    ],
+    "prompts": [
+        {
+            "type": "input",
+            "name": "cover",
+            "message": "What is your project's cover?",
+            "default": "require('@/assets/images/cover.png')",
+            "required": true
+        },
+        {
+            "type": "input",
+            "name": "logo",
+            "message": "What is your project's logo?",
+            "default": "require('@/assets/images/logo.png')",
+            "required": true
+        },
+        {
+            "type": "input",
+            "name": "tagline1",
+            "message": "What is your project's tagline1?",
+            "default": "A tasks marketplace for",
+            "required": true
+        },
+        {
+            "type": "input",
+            "name": "tagline2",
+            "message": "What is your project's tagline2?",
+            "default": "gigs, services and jobs",
+            "required": true
+        },
+        {
+            "type": "confirm",
+            "name": "onboarding",
+            "message": "Do you want an onboarding button?",
+            "required": true,
+            "default": true
+        }
+    ]
+}
